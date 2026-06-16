@@ -157,6 +157,8 @@ sudo bpftrace -e 'tracepoint:syscalls:sys_enter_execve {
 - *BPF Performance Tools* — Brendan Gregg
 - [ebpf.io](https://ebpf.io)
 
+> 🌐 English version (dev.to): https://dev.to/hyperredstart/what-is-ebpf-really-a-builders-mental-model-4mj2
+
 ---
 
 *剛接觸 eBPF？留言告訴我哪一個觀念你還覺得霧霧的，我來幫你講清楚。*
