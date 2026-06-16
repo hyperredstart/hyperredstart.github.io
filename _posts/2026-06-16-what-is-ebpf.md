@@ -152,12 +152,12 @@ sudo bpftrace -e 'tracepoint:syscalls:sys_enter_execve {
 
 ## 延伸資源
 
-- 我的動手做範例：**github.com/hyperredstart/hello-ebpf**
+- 我的動手做範例：[github.com/hyperredstart/hello-ebpf](https://github.com/hyperredstart/hello-ebpf)
 - *Learning eBPF* — Liz Rice（那張漫畫就出自這本書）
 - *BPF Performance Tools* — Brendan Gregg
 - [ebpf.io](https://ebpf.io)
 
-> 🌐 English version (dev.to): https://dev.to/hyperredstart/what-is-ebpf-really-a-builders-mental-model-4mj2
+> 🌐 English version (dev.to): [What is eBPF, Really? — A Builder's Mental Model](https://dev.to/hyperredstart/what-is-ebpf-really-a-builders-mental-model-4mj2)
 
 ---
 
