@@ -116,13 +116,14 @@ int on_switch(struct trace_event_raw_sched_switch *ctx)
 
 ## 重點整理
 
-- **eBPF 直接讀 kernel 資料、省掉文字解析成本——它這套做法更省，而且在每個測試裡都贏（`/proc` ）**
+- **eBPF 直接讀 kernel 資料、省掉文字解析成本——它這套做法更省，而且在每個測試裡都贏過 `/proc`**
 - **系統 gauge：eBPF 只贏一點點（落在雜訊內）**——不值得只為它特地換掉現有做法
 - **per-process 在密度下：eBPF 大勝**——kernel 裡付 O(有在跑的 pid)，輪詢付 O(所有 Process) 的檔案 I/O，且差距隨 Process 數量放大
 
 ## 延伸資源
 
 - 完整 benchmark（兩種場景）：[hyperredstart/hello-ebpf → proc-vs-ebpf/](https://github.com/hyperredstart/hello-ebpf/tree/main/proc-vs-ebpf)
+- 英文版（dev.to）：[I Measured eBPF vs /proc Monitoring Overhead](https://dev.to/hyperredstart/i-measured-ebpf-vs-proc-monitoring-overhead-ebpf-is-cheaper-and-the-gap-grows-with-scale-532k)
 - 《BPF Performance Tools》— Brendan Gregg
 - [ebpf.io](https://ebpf.io)
 
