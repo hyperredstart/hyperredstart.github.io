@@ -1,0 +1,21 @@
+---
+---
+
+@use 'abstracts/variables' with (
+  $theme: '{{ site.theme_mode }}'
+);
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* append your custom style below */
+
+/* Home-list cards size the cover by the card's text height, so a wide (1.91:1)
+   cover gets its left/right edges cropped. Show the whole cover instead. */
+#post-list .card .preview-img img {
+  object-fit: contain;
+}
