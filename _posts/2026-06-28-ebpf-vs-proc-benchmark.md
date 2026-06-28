@@ -1,6 +1,6 @@
 ---
-title: "我實測了 eBPF vs /proc 監控開銷——eBPF 較省，且規模越大差距越大"
-description: "我在 Lima VM 裡量了輪詢 /proc 與 eBPF 收主機 metrics 的 CPU 成本。eBPF 在每個場景都較省——沒有任何一次是 /proc 反而較快。差距在只收一兩個系統層級 gauge 時很小（落在雜訊內），在 per-process 指標時很大（~100 Process 約 4 倍、~600 Process 約 17 倍），且隨你追蹤的 Process 數量增加而擴大。"
+title: "eBPF vs /proc 監控開銷——eBPF 較省，且規模越大差距越大"
+description: "Lima VM 裡量了輪詢 /proc 與 eBPF 收主機 metrics 的 CPU 成本。eBPF 在每個場景都較省——沒有任何一次是 /proc 反而較快。差距在只收一兩個系統層級 gauge 時很小（落在雜訊內），在 per-process 指標時很大（~100 Process 約 4 倍、~600 Process 約 17 倍），且隨你追蹤的 Process 數量增加而擴大。"
 date: 2026-06-28 09:00:00 +0800
 categories: [eBPF, 效能]
 tags: [ebpf, observability, linux, performance]
