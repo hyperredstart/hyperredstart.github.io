@@ -1,0 +1,19 @@
+---
+# Custom styles on top of the Chirpy theme.
+# The front matter dashes above are required so Jekyll compiles this SCSS.
+---
+
+@use "main";
+
+/* --- Post cover image: show the whole cover, don't crop the edges/labels ---
+   Chirpy crops the hero to a fixed ratio with object-fit: cover, which can clip
+   covers whose aspect differs (or whose content sits near the edges). Match the
+   box to our 1200x630 covers and use `contain` so nothing is cut off. */
+.preview-img {
+  aspect-ratio: 1200 / 630;
+  background: var(--card-bg, transparent);
+}
+
+.preview-img img {
+  object-fit: contain;
+}
